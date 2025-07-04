@@ -63,3 +63,13 @@ select Product_Category, SUM(distinct Row_ID) as TotalSales
 from Inventory
 group by Product_category
 order by TotalSales desc
+
+
+2	What are the Top 3 and Bottom 3 regions in terms of sales? 
+a.	Top 3 regions by sales
+Sequel Query Used:
+Select top 3 Region, SUM(Sales) AS TotalSales
+from Inventory
+group by Region
+order by TotalSales desc
+
