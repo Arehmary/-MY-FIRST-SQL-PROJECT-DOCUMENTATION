@@ -81,3 +81,12 @@ order by TotalSales desc
   group by Region
   order by TotalSales asc
 
+   3. What were the total sales of appliances in Ontario? 
+  GROUP BY, SUM (), AND ORDER BY CLAUSES ARE USED
+  Sequel Query Used:
+  SELECT Region,  Product_Sub_Category, SUM(Sales) AS TotalSales
+  FROM Inventory
+  WHERE Region = 'Ontario'
+  AND Product_Sub_Category = 'Appliances' 
+  GROUP BY Region,  Product_Sub_Category
+  ORDER BY TotalSales desc
