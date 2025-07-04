@@ -30,3 +30,5 @@ Note when it shows red it means there is an error, once it does not give you err
   Always confirm the source of data before you import your data to a destination, pay attention to the number of records. To import CSV File click on the database where you want your table to be saved .Go click on the  the  database you created ,right click on it,go to tasks from tasks navigate to import flat. files, review the files then modify the column by changing order id to int and changing sales, discount, profit, unit price shipping cost and any data type name float to be checked under allow null.
 
 ## How to Number Your Query
+
+ Go to tools at the right the right from the left corner side you will see tool beside project, click on tools you will see options, scroll down and navigate to options ,once you click on the options navigate to text editor then move to transact SQL and navigate to Line number and click on it, automatically it will enable number  for you.
