@@ -74,9 +74,10 @@ order by TotalSales desc
  order by TotalSales desc
 
   2b. Bottom 3 regions in terms of sales
- GROUP BY, SUM (), AND ORDER BY CLAUSES ARE USED
- Sequel query used:
- Select top 3 Region, SUM(Sales) AS TotalSales
- from Inventory
- group by Region
- order by TotalSales asc
+  GROUP BY, SUM (), AND ORDER BY CLAUSES ARE USED
+  Sequel query used:
+  Select top 3 Region, SUM(Sales) AS TotalSales
+  from Inventory
+  group by Region
+  order by TotalSales asc
+
