@@ -54,3 +54,12 @@ Express Air is the fastest but the most expensive one, do you think the company
 appropriately spent shipping costs based on the Order Priority? Explain your answer
  
 ## Case Study Problems and Solutions (Kultra Mega Store  inventory)
+
+Case Scenario I 
+1.	Which product category had the highest sales? 
+GROUP BY, SUM (), AND ORDER BY CLAUSES ARE USED
+Sequel Query:
+select Product_Category, SUM(distinct Row_ID) as TotalSales
+from Inventory
+group by Product_category
+order by TotalSales desc
