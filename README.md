@@ -16,3 +16,8 @@ This is where I started my tech Journey building my Portfolio while taking my Da
 
   ## Data Source
   The primary source of Data used here is CSV and this is an open source data that can be freely downloaded from an open source online or other data repository site.
+
+  ## Tools Used
+  Microsoft  SQL Server  Studio
+
+  ## How To Create a Data Base
