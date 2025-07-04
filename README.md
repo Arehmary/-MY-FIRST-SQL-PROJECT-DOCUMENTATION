@@ -33,3 +33,5 @@ Note when it shows red it means there is an error, once it does not give you err
 
  Go to tools at the right the right from the left corner side you will see tool beside project, click on tools you will see options, scroll down and navigate to options ,once you click on the options navigate to text editor then move to transact SQL and navigate to Line number and click on it, automatically it will enable number  for you.
 
+
+## Exploratory Data Analysis
