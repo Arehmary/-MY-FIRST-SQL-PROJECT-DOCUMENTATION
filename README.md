@@ -90,3 +90,12 @@ order by TotalSales desc
   AND Product_Sub_Category = 'Appliances' 
   GROUP BY Region,  Product_Sub_Category
   ORDER BY TotalSales desc
+
+  4.	Advise the management of KMS on what to do to increase the revenue from the bottom 10 customers 
+  GROUP BY, SUM (), AND ORDER BY CLAUSES ARE USED
+  Squel Query Used:
+  Select top 10 Customer_Name, SUM(Sales) AS TotalSales
+  from Inventory
+  group by Customer_Name
+  order by TotalSales asc
+
