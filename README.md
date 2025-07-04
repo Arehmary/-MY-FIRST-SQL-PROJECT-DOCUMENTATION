@@ -21,3 +21,8 @@ This is where I started my tech Journey building my Portfolio while taking my Da
   Microsoft  SQL Server  Studio
 
   ## How To Create a Data Base
+
+  To Create data base ,type on the white background
+ Create Database KMSinventory_DB
+Note when it shows red it means there is an error, once it does not give you error you can execute,You then get a message that commands has been completed. To confirm if database has been completed go to your database ,right click on it  and refresh, go to database button refresh it, you are going to se your new database created.
+
