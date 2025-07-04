@@ -99,3 +99,22 @@ order by TotalSales desc
   group by Customer_Name
   order by TotalSales asc
 
+ 5, KMS incurred the most shipping cost using which shipping method?
+ GROUP BY, SUM (), AND ORDER BY CLAUSES ARE USED
+ Sequel Query Used: 
+ Select top 5 Ship_Mode, SUM(Shipping_Cost) AS TotalShipping_Cost
+  from Inventory
+  group by Ship_Mode
+  order by TotalShipping_Cost desc
+
+
+ Case Scenario II 
+ 6. Who are the most valuable customers, and what products or services do they typically purchase? 
+ a. Who are the most valuable customers?
+ Sequel Query Used
+ SELECT top 5 Customer_Name, SUM(Order_Quantity*Unit_Price) AS TotalRevenue
+ FROM Inventory
+ GROUP BY Customer_Name
+ORDER BY TotalRevenue DESC
+
+
