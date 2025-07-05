@@ -118,3 +118,11 @@ order by TotalSales desc
 ORDER BY TotalRevenue DESC
 
 
+ 7. Which small business customer had the highest sales? 
+ GROUP BY, SUM (), AND ORDER BY CLAUSES ARE USED
+ Sequel Query Used:
+ SELECT TOP 1 Customer_Segment, Customer_Name, SUM(Sales) AS TotalSales
+ FROM Inventory
+ WHERE Customer_Segment = 'Small Business'
+ GROUP BY Customer_Segment, Customer_Name
+ ORDER BY TotalSales desc
