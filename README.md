@@ -126,3 +126,58 @@ ORDER BY TotalRevenue DESC
  WHERE Customer_Segment = 'Small Business'
  GROUP BY Customer_Segment, Customer_Name
  ORDER BY TotalSales desc
+
+
+ 8. Which Corporate Customer placed the most number of orders in 2009 – 2012? 
+ Sequel Query Used
+
+ SELECT top 1 Customer_Name, Customer_Segment,
+ Count(Order_ID) AS TotalOrders
+ FROM Inventory
+ WHERE Customer_Segment = 'Corporate'
+ AND Year (Order_Date) BETWEEN 2
+ 009 AND 2012
+ GROUP BY Customer_Name, Customer_Segment
+ ORDER BY TotalOrders desc;
+
+ 9. Which consumer customer was the most profitable one? 
+ Sequel Query Used:
+ SELECT top 1 Customer_Segment, Customer_Name, SUM(Profit) AS TotalProfit
+ FROM Inventory
+ Where Customer_Segment = 'Consumer'
+ GROUP BY Customer_Name, Customer_segment
+ ORDER BY TotalProfit DESC
+
+
+ 10. Which customer returned items, and what segment do they belong to? 
+ Sequel Query Used:
+ SELECT DISTINCT o.[Order_ID], o.[Customer_Name], o.[Customer_Segment]
+ FROM Inventory o
+ JOIN [dbo].[Order_Status] r 
+ ON o.[Order_ID] = r.[Order_ID]
+ WHERE r.Status = 'Returned';
+
+  11, If the delivery truck is the most economical but the slowest shipping method and Express Air is the fastest but the most expensive one, do you think the company     appropriately spent shipping costs based on the Order Priority? Explain your answer
+  Sequel Query Used:
+SELECT 
+    Order_Priority,
+    Ship_Mode,
+    COUNT(Order_ID) AS orderCount,
+    Round(SUM(Sales - Profit), 2) AS Estimatedshippingcost,
+   AVG(DATEDIFF(day, [Order_Date], [Ship_Date])) AS AvgShipDays
+   FROM Inventory
+  GROUP BY Order_Priority, Ship_Mode
+ ORDER BY Order_Priority, Ship_Mode desc
+
+# Recommendation
+Kultra Mega Stores (KMS) does not consistently align shipping methods with order priorities. A policy review is needed to ensure that:
+1.	Standardize Shipping Rules:
+Express Air only for Critical/High priority.
+Delivery Truck for Low priority, but only if cheaper.
+2.	Audit Delivery Truck Usage:
+Costs are consistently higher, with no delivery speed advantage.
+3.	Enforce Priority Labelling:
+Avoid "Not Specified" to make informed shipping decisions.
+4.	Optimize Cost-Effectiveness:
+Favor Express Air when it is both faster and cheaper (as seen here).
+Proper controls need to be put in place to reduce costs and match urgency with speed.
